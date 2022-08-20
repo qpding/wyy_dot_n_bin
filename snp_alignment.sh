@@ -103,12 +103,6 @@ while getopts ${optstr} option; do
 		V) # print software version
 			echo "$scriptName $version"
 			exit
-			;;
-		# *) # invalid option
-			# # echo "Error: Invalid option"
-			# help
-			# exit
-			# ;;
 	esac
 done
 

@@ -13,7 +13,14 @@ The scripts wrap the following software packages.
 ```
 
 ## Usage
-### Get help
+
+### Get or Update the repo
+```
+cd your_path
+git clone https://github.com/qpding/wyy_dot_n_bin.git
+```
+
+### Display help
 ```
 command_or_script_name -h
 ```

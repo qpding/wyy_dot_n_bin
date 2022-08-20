@@ -37,6 +37,15 @@ check_if_dir ()
 	fi
 }
 
+check_if_file ()
+{
+	if [ ! -f "$1" ]
+	then
+		echo "Specified file $1 doesn't exist."
+		exit
+	fi
+}
+
 ############################################################
 # Main function                                            #
 ############################################################
@@ -63,12 +72,8 @@ while getopts ${optstr} option; do
 			fi
 			;;
 		n) # set *.jar name
+			check_if_file ${OPTARG}
 			jar_name=${OPTARG}
-			if [ ! -f "$OPTARG" ]
-			then
-				echo "The jar file doesn't exist."
-				exit
-			fi
 			# full_file_name=$(basename "$OPTARG")
 			# file_dir=$(dirname "$OPTARG")
 			# file_dir="${file_dir}/"

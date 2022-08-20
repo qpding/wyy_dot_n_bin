@@ -25,7 +25,7 @@ git clone https://github.com/qpding/wyy_dot_n_bin.git
 command_or_script_name -h
 ```
 
-### Set execute mode
+### Set up script permissions
 Refer to the following command to make the scripts executable. In normal cases this has to be done only once after the repository is cloned.
 ```
 cd path_to_the_scripts

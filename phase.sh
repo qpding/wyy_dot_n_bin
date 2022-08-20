@@ -19,6 +19,26 @@ help()
 	echo
 }
 
+############################################################
+# Main function                                            #
+############################################################
+# Get options
+optstr="hvV"
+while getopts ${optstr} option; do
+	case $option in
+		h | \?) # display Help
+			help
+			exit
+			;;
+		v) # turn on verbose
+			verbose=1
+			;;
+		V) # print software version
+			echo "$scriptName $version"
+			exit
+	esac
+done
+
 for i in {1..22}
 do
     mkdir chr$i
